@@ -63,7 +63,6 @@ const App: React.FC = () => (
   // The useEffect hook is used to run the init function when the component mounts.
   <IonApp>
     <IonReactRouter>
-      <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/Home">
             <Home />
@@ -78,21 +77,6 @@ const App: React.FC = () => (
             <Redirect to="/Home" />
           </Route>
         </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="Home" href="/Home">
-            <IonIcon aria-hidden="true" icon={triangle} />
-            <IonLabel>Home</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="Login" href="/Login">
-            <IonIcon aria-hidden="true" icon={ellipse} />
-            <IonLabel>Login</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon aria-hidden="true" icon={square} />
-            <IonLabel>Tab 3</IonLabel>
-          </IonTabButton>
-        </IonTabBar>
-      </IonTabs>
     </IonReactRouter>
   </IonApp>
 );
